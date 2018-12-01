@@ -1,0 +1,42 @@
+<!-- Tom Wicklund - Lab 12 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+	var leftPos = Math.floor((Math.random() * 1000) + 1);
+	var topPos = Math.floor((Math.random() * 1000) + 1);
+
+	$(document).ready(function(){
+			$("div").click(function(){
+					$(this).animate({left: leftPos});
+					$(this).animate({top: topPos});
+			});
+	});
+	
+	function restart() {
+    location.reload();
+	}
+	
+</script> 
+<style>
+	body{
+		background-color: navy;
+	}
+	h1{
+		text-align: center;
+		color: red;
+	}
+	button{
+		width: 100%;
+		background-color:red;
+		color: navy;
+	}
+</style>
+</head>
+	<h1>Click The Red Square!</h1>
+	<div style="background:red;height:100px;width:100px;top:40%;left:45%;position:absolute;"></div>
+	<button onclick="restart()">Click to Restart!</button>
+<body>
+</html> 
